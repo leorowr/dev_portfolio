@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashish Sontakke | Operations & Data Analyst</title>
+  <title>ASHISH | Full-Stack Developer & UI/UX Product Builder</title>
 
   <!-- Google Fonts: Syne (Display/Headings) & Plus Jakarta Sans (Clean Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,17 +12,17 @@
 
   <style>
     /* ==========================================================================
-       1. DESIGN SYSTEM & CSS VARIABLES
+       1. THE DESIGN SYSTEM & TYPOGRAPHY
        ========================================================================== */
     :root {
-      --bg-black: #050505;
-      --card-bg: #121212;
+      --bg-black: #050505;          /* Deep obsidian black (#000000 to #080808) */
+      --card-bg: #121212;           /* Charcoal dark card background */
       --card-hover: #161616;
-      --border-dark: #222222;
-      --accent-primary: #FF5722;   /* High-contrast Vibrant Orange */
+      --border-dark: #222222;       /* 1px fine-line dark border */
+      --accent-primary: #FF5722;    /* High-contrast vibrant branding orange */
       --accent-glow: rgba(255, 87, 34, 0.16);
-      --text-white: #FFFFFF;
-      --text-silver: #E0E0E0;
+      --text-white: #FFFFFF;        /* Bright white headers */
+      --text-silver: #E0E0E0;       /* Off-white/silver body text */
       --text-muted: #888888;
       --font-display: 'Syne', sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -39,7 +39,7 @@
       background-color: var(--bg-black);
       color: var(--text-silver);
       font-family: var(--font-body);
-      overflow-x: hidden; /* Enforce overflow-x hidden to prevent horizontal scroll bugs */
+      overflow-x: hidden; /* Enforce overflow-x: hidden on html/body */
       line-height: 1.6;
     }
 
@@ -63,14 +63,14 @@
       padding: 100px 0;
     }
 
-    /* Giant Branding Text */
+    /* Giant Branding Header */
     .giant-title {
       font-family: var(--font-display);
-      font-size: clamp(3.2rem, 11vw, 13rem);
+      font-size: clamp(3.5rem, 12vw, 15rem);
       font-weight: 900;
       letter-spacing: -0.04em;
       text-transform: uppercase;
-      line-height: 0.85;
+      line-height: 0.8;
       color: var(--text-white);
       user-select: none;
     }
@@ -104,7 +104,7 @@
       left: 0;
       width: 100%;
       height: var(--nav-height);
-      background-color: #F8F9FA; /* Floating light background */
+      background-color: #F8F9FA; /* Floating sticky header with light background */
       display: flex;
       align-items: center;
       z-index: 1000;
@@ -138,7 +138,7 @@
 
     .desktop-nav a {
       color: #111111 !important;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
     }
 
@@ -149,7 +149,7 @@
     .cta-nav-btn {
       background-color: #111111;
       color: #FFFFFF !important;
-      padding: 10px 24px;
+      padding: 11px 26px;
       border-radius: 999px;
       font-size: 0.95rem;
       font-weight: 700;
@@ -203,7 +203,7 @@
 
     .drawer-panel-left {
       width: 100%;
-      background-color: #000000;
+      background-color: #000000; /* Black background */
       padding: 40px 30px;
       display: flex;
       flex-direction: column;
@@ -212,7 +212,7 @@
     }
 
     .drawer-panel-right {
-      display: none;
+      display: none; /* Dark grey panel shown on desktop/tablets */
       width: 40%;
       background-color: #121212;
       padding: 40px;
@@ -245,7 +245,7 @@
       font-size: 1.8rem;
       font-weight: 700;
       text-transform: uppercase;
-      white-space: nowrap;
+      white-space: nowrap; /* Prevent letter-wrapping bugs */
       transition: color 0.3s ease;
     }
 
@@ -254,7 +254,7 @@
     }
 
     /* ==========================================================================
-       COMPONENT C: HERO SECTION
+       COMPONENT C: THE HERO SECTION
        ========================================================================== */
     .hero-section {
       padding-top: calc(var(--nav-height) + 40px);
@@ -280,7 +280,7 @@
       background-color: var(--card-bg);
       border: 1px solid var(--border-dark);
       border-radius: 16px;
-      padding: 30px;
+      padding: 32px 28px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
@@ -291,14 +291,14 @@
       color: var(--text-white);
       text-transform: uppercase;
       line-height: 1.35;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .hero-item-list li {
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       color: var(--text-silver);
       margin-bottom: 12px;
       line-height: 1.45;
@@ -307,6 +307,8 @@
     .hero-item-list .plus-icon {
       color: var(--accent-primary);
       font-weight: 900;
+      font-size: 1.1rem;
+      line-height: 1;
     }
 
     .hero-center-visual {
@@ -319,10 +321,8 @@
     .hero-image-frame {
       width: 100%;
       max-width: 380px;
-      height: auto;
-      max-height: 520px;
       border-radius: 20px;
-      background: radial-gradient(circle, rgba(255,87,34,0.12) 0%, rgba(0,0,0,0) 70%);
+      background: radial-gradient(circle, rgba(255,87,34,0.14) 0%, rgba(0,0,0,0) 70%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -332,14 +332,14 @@
 
     .hero-image-frame img {
       width: 100%;
+      max-height: 480px;
       height: auto;
-      max-height: 490px;
-      object-fit: contain; /* Shows the full image without cropping */
+      object-fit: contain; /* Full portrait display without cropping */
       display: block;
     }
 
     .hero-right-card .stat-box {
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .hero-right-card .stat-box:last-child {
@@ -348,7 +348,7 @@
 
     .stat-number {
       font-family: var(--font-display);
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       font-weight: 900;
       color: var(--text-white);
       line-height: 1;
@@ -360,7 +360,7 @@
     }
 
     .stat-label {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       text-transform: uppercase;
       font-weight: 600;
@@ -378,20 +378,21 @@
     }
 
     .about-photo-wrap {
-      border-radius: 16px;
+      border-radius: 12px;
       border: 1px solid var(--border-dark);
       background-color: var(--card-bg);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px;
+      padding: 12px;
+      max-width: 100%;
     }
 
     .about-photo-wrap img {
       width: 100%;
       max-height: 480px;
       height: auto;
-      object-fit: contain; /* Prevents heads/faces from being sliced off */
+      object-fit: contain;
       border-radius: 12px;
       display: block;
     }
@@ -452,7 +453,7 @@
     }
 
     /* ==========================================================================
-       COMPONENT E: CORE EXPERTISE GRID
+       COMPONENT E: CORE EXPERTISE GRID (4 CARDS)
        ========================================================================== */
     .expertise-grid {
       display: grid;
@@ -483,7 +484,7 @@
 
     .expertise-card h3 {
       font-family: var(--font-display);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--text-white);
       margin-bottom: 14px;
@@ -491,13 +492,13 @@
     }
 
     .expertise-card p {
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
     /* ==========================================================================
-       COMPONENT F: FEATURED PROJECTS & ENTERPRISE SIMULATIONS
+       COMPONENT F: FEATURED PROJECTS SHOWCASE (2-COLUMN GRID)
        ========================================================================== */
     .projects-grid {
       display: grid;
@@ -530,7 +531,7 @@
 
     .project-title {
       font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: var(--text-white);
       text-transform: uppercase;
@@ -538,7 +539,7 @@
     }
 
     .live-preview-btn {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 700;
       color: var(--accent-primary);
       display: inline-flex;
@@ -556,7 +557,7 @@
     }
 
     .project-bullets li {
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       color: var(--text-silver);
       margin-bottom: 10px;
       position: relative;
@@ -581,9 +582,9 @@
       background-color: #1A1A1A;
       border: 1px solid #282828;
       color: #BBBBBB;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 999px;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
     }
 
@@ -624,15 +625,15 @@
     }
 
     .service-desc {
-      font-size: 0.94rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
     }
 
     /* ==========================================================================
-       COMPONENT H: CONNECT & FOOTER
+       COMPONENT H: CONNECT SECTION (FOOTER)
        ========================================================================== */
     .footer-section {
-      background-color: #000000;
+      background-color: #000000; /* Centered layout in black container */
       border-top: 1px solid var(--border-dark);
       padding: 100px 0 60px 0;
       text-align: center;
@@ -679,7 +680,8 @@
       }
       .hero-image-frame {
         max-width: 320px;
-        height: auto; max-height: 380px; /* Constrain portrait height on tablets */
+        height: auto;
+        max-height: 450px; /* Constrain portrait height on tablets */
       }
       .about-grid {
         grid-template-columns: 1fr;
@@ -702,7 +704,7 @@
 
     @media (max-width: 575px) {
       .hero-image-frame {
-        height: auto; max-height: 380px; /* Limit hero cutout image height on mobile */
+        max-height: 320px; /* Limit hero cutout image height on mobile */
       }
       .drawer-menu a {
         font-size: 1.4rem; /* Reduced offcanvas link text to fit compact screens */
@@ -720,7 +722,7 @@
 
   <!-- ==========================================================================
        COMPONENT A: STICKY FLOATING NAVBAR
-       ========================================================================== -->
+       ========================================================================== */
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo">ASHISH<span>.</span></a>
@@ -728,9 +730,9 @@
       <div class="desktop-nav">
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
-        <a href="#projects">Work & Simulations</a>
-        <a href="#services">What I Deliver</a>
-        <a href="#contact" class="cta-nav-btn">Let's Connect</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">What I Build</a>
+        <a href="#contact" class="cta-nav-btn">Let's Talk</a>
       </div>
 
       <button class="hamburger-btn" id="openDrawerBtn" aria-label="Open Navigation">
@@ -742,8 +744,8 @@
   </nav>
 
   <!-- ==========================================================================
-       COMPONENT B: OFFCANVAS SPLIT-SCREEN MOBILE DRAWER
-       ========================================================================== -->
+       COMPONENT B: SPLIT-SCREEN OFFCANVAS MOBILE DRAWER
+       ========================================================================== */
   <div class="offcanvas-drawer" id="mobileDrawer">
     <div class="drawer-panel-left">
       <button class="drawer-close-btn" id="closeDrawerBtn" aria-label="Close Navigation">&times;</button>
@@ -751,29 +753,29 @@
       <div class="drawer-menu">
         <a href="#about" class="drawer-nav-link">About</a>
         <a href="#expertise" class="drawer-nav-link">Expertise</a>
-        <a href="#projects" class="drawer-nav-link">Work & Simulations</a>
-        <a href="#services" class="drawer-nav-link">What I Deliver</a>
-        <a href="#contact" class="drawer-nav-link">Connect</a>
+        <a href="#projects" class="drawer-nav-link">Projects</a>
+        <a href="#services" class="drawer-nav-link">What I Build</a>
+        <a href="#contact" class="drawer-nav-link">Contact</a>
       </div>
 
       <div style="font-size: 0.85rem; color: #555555;">
-        © ASHISH SONTAKKE. OPERATIONS & DATA ANALYST
+        © ASHISH. FULL-STACK DEVELOPER
       </div>
     </div>
 
     <div class="drawer-panel-right">
-      <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">
-        DATA ANALYST & SYSTEMS BUILDER
+      <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">
+        ASHISH
       </div>
       <p style="color: #888888; font-size: 0.95rem; line-height: 1.6;">
-        Demonstrated expertise across Deloitte & Tata enterprise programs in business analytics, cybersecurity access governance (IAM/RBAC), and ESG reporting.
+        Full-Stack Web Developer & UI/UX Product Builder specializing in high-performance web applications, modern architectures, and scalable interactive interfaces.
       </p>
     </div>
   </div>
 
   <!-- ==========================================================================
-       COMPONENT C: HERO SECTION
-       ========================================================================== -->
+       COMPONENT C: THE HERO SECTION
+       ========================================================================== */
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="hero-header-wrap">
@@ -781,38 +783,37 @@
       </div>
 
       <div class="hero-grid">
-        <!-- Left Box -->
+        <!-- Left Box: Hero Intro Card -->
         <div class="floating-card hero-left-card">
-          <span class="section-eyebrow">Professional Profile</span>
-          <h2>HI, I'M ASHISH<br><span style="color: var(--accent-primary); font-size: 1.02rem;">OPERATIONS & DATA ANALYST</span></h2>
+          <span class="section-eyebrow">Product Builder</span>
+          <h2>HI, I'M ASHISH<br><span style="color: var(--accent-primary); font-size: 1.02rem;">FULL-STACK WEB DEVELOPER & UI/UX BUILDER</span></h2>
           <ul class="hero-item-list">
-            <li><span class="plus-icon">+</span> Cleaned & Analyzed 541k+ Records (UCI Retail)</li>
-            <li><span class="plus-icon">+</span> Deloitte Digital Elite Challenge Credential</li>
-            <li><span class="plus-icon">+</span> Tata Verified in BI, IAM, GenAI & ESG Systems</li>
+            <li><span class="plus-icon">+</span> React.js & Next.js Ecosystem</li>
+            <li><span class="plus-icon">+</span> Node.js, Express & Supabase</li>
+            <li><span class="plus-icon">+</span> Responsive UI/UX & Interaction Design</li>
           </ul>
         </div>
 
-        <!-- Center Background Portrait Frame -->
+        <!-- Center Background: Portrait Cutout Frame -->
         <div class="hero-center-visual">
           <div class="hero-image-frame">
-            <!-- Replace image source with your portrait cutout -->
-            <img src="hero-cutout.jpg" alt="Ashish Sontakke Portrait" />
+            <img src="hero-cutout.jpg" alt="Ashish Portrait" />
           </div>
         </div>
 
-        <!-- Right Box (Key Career Metrics) -->
+        <!-- Right Box: Statistical Overview Card -->
         <div class="floating-card hero-right-card">
           <div class="stat-box">
-            <div class="stat-number">541<span>K+</span></div>
-            <div class="stat-label">Transactions Analyzed</div>
+            <div class="stat-number">6<span>+</span></div>
+            <div class="stat-label">Live Production Projects</div>
           </div>
           <div class="stat-box">
-            <div class="stat-number">5<span>+</span></div>
-            <div class="stat-label">Enterprise Credentials</div>
+            <div class="stat-number">100<span>%</span></div>
+            <div class="stat-label">Client Satisfaction & Scalability</div>
           </div>
           <div class="stat-box">
-            <div class="stat-number">95<span>%</span></div>
-            <div class="stat-label">Verified Typing Precision</div>
+            <div class="stat-number">24<span>/7</span></div>
+            <div class="stat-label">Clean Code & Architecture</div>
           </div>
         </div>
       </div>
@@ -821,33 +822,33 @@
 
   <!-- ==========================================================================
        COMPONENT D: ABOUT ME SECTION
-       ========================================================================== -->
+       ========================================================================== */
   <section class="section-padding" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-photo-wrap">
-          <img src="about-photo.jpg" alt="Ashish Professional Focus" />
+          <img src="about-photo.jpg" alt="Ashish Workspace" />
         </div>
 
         <div class="about-content">
-          <span class="section-eyebrow">Career Summary</span>
-          <h2 class="section-heading">Analytical Discipline & Operational Acumen</h2>
+          <span class="section-eyebrow">About Me</span>
+          <h2 class="section-heading">Engineered for Performance & Aesthetic Precision</h2>
           <p>
-            I am a detail-oriented and adaptable Operations & Data Analyst based in Wardha, Maharashtra, holding an academic foundation in Arts (B.A. from RTM Nagpur University), ITI Wireman Trade vocational certification, and MS-CIT with Distinction.
+            I am a Full-Stack Developer and UI/UX Product Builder dedicated to transforming complex concepts into clean, accessible, and high-impact digital experiences. My focus bridges thoughtful visual hierarchy with robust engineering.
           </p>
           <p>
-            My verified work spans the Deloitte Digital Elite Challenge and four Tata enterprise programs covering Data Analytics, Business Intelligence & Visualisation, Cybersecurity (IAM/RBAC), and ESG Sustainability Reporting. I bridge operational workflows with data integrity to deliver actionable C-suite insights.
+            From conceptualizing responsive user flows to architecting resilient backend systems, I ensure every product is built with clean maintainability, speed, and real-world scalability.
           </p>
 
           <ul class="principles-list">
-            <li><span class="bullet-dot"></span> <strong>Data Integrity First:</strong> Enforcing strict filtering rules, baseline normalization, and 95% keyboarding precision.</li>
-            <li><span class="bullet-dot"></span> <strong>Governance & Least Privilege:</strong> Applying RBAC and IAM controls to prevent unauthorized data exposure.</li>
-            <li><span class="bullet-dot"></span> <strong>Executive Storytelling:</strong> Transforming complex datasets into clear, C-level decision frameworks.</li>
+            <li><span class="bullet-dot"></span> <strong>Modular Architecture:</strong> Reusable, component-driven development for long-term scalability.</li>
+            <li><span class="bullet-dot"></span> <strong>Pixel-Perfect Execution:</strong> Strict fidelity to design systems, layout rhythm, and responsive grids.</li>
+            <li><span class="bullet-dot"></span> <strong>Performance First:</strong> Zero-fluff implementations prioritizing load times and smooth motion.</li>
           </ul>
 
           <!-- Exact 110px x 110px Circular CTA Button -->
           <a href="#contact" class="cta-circular-btn">
-            Connect<br>With Me
+            Build Your<br>Product
           </a>
         </div>
       </div>
@@ -855,131 +856,91 @@
   </section>
 
   <!-- ==========================================================================
-       COMPONENT E: CORE EXPERTISE GRID
-       ========================================================================== -->
+       COMPONENT E: CORE EXPERTISE SECTION (4 CARDS)
+       ========================================================================== */
   <section class="section-padding" id="expertise">
     <div class="container">
-      <span class="section-eyebrow">Skills & Capabilities</span>
-      <h2 class="section-heading">Core Competencies</h2>
+      <span class="section-eyebrow">Core Expertise</span>
+      <h2 class="section-heading">Technical Arsenal</h2>
 
       <div class="expertise-grid">
-        <!-- 1. Data Analytics -->
+        <!-- 1. Frontend -->
         <div class="expertise-card">
-          <div class="card-icon">📊</div>
-          <h3>Data & Business Analytics</h3>
-          <p>Exploratory Data Analysis (EDA), Data Cleansing & Validation, Time-Series Forecasting, RFM Customer Segmentation, KPI Tracking, and Trend Modeling.</p>
+          <div class="card-icon">💻</div>
+          <h3>Frontend</h3>
+          <p>React.js, Next.js, TypeScript, Tailwind CSS, Bootstrap, GSAP animation workflows, and high-contrast dark themes.</p>
         </div>
 
-        <!-- 2. BI & Visualisation -->
+        <!-- 2. Backend & Databases -->
         <div class="expertise-card">
-          <div class="card-icon">📈</div>
-          <h3>BI & Visualisation</h3>
-          <p>Power BI, Tableau, Advanced MS Excel (Pivot Tables, VLOOKUP, Conditional Logic), Executive Dashboards, Pareto Analysis, and Geospatial Mapping.</p>
+          <div class="card-icon">⚙️</div>
+          <h3>Backend & Databases</h3>
+          <p>Node.js, Express.js, RESTful APIs, Supabase, PostgreSQL, relational schema design, and server-side optimizations.</p>
         </div>
 
-        <!-- 3. Enterprise Security & Governance -->
+        <!-- 3. AI & Automation -->
         <div class="expertise-card">
-          <div class="card-icon">🛡️</div>
-          <h3>Security & Governance</h3>
-          <p>Identity & Access Management (IAM), Role-Based Access Control (RBAC), Least-Privilege Principles, Access Policy Auditing, and ESG Frameworks.</p>
+          <div class="card-icon">🤖</div>
+          <h3>AI & Automation</h3>
+          <p>OpenAI API integration, AI autonomous agents, workflow automation pipelines, custom assistants, and intelligent bots.</p>
         </div>
 
-        <!-- 4. Operations & Technical Acumen -->
+        <!-- 4. CMS & Platforms -->
         <div class="expertise-card">
-          <div class="card-icon">⚡</div>
-          <h3>Operations & ERP</h3>
-          <p>Inventory Tracking, Material Inward/Outward Documentation, Technical Electrical Spares Knowledge, Industrial Safety Protocols, and 95% Typing Precision.</p>
+          <div class="card-icon">🚀</div>
+          <h3>CMS & Platforms</h3>
+          <p>WordPress, Shopify development, custom UI/UX design systems, technical SEO architecture, and Vercel cloud deployments.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       COMPONENT F: FEATURED PROJECTS & ENTERPRISE SIMULATIONS
-       ========================================================================== -->
+       COMPONENT F: FEATURED PROJECTS SHOWCASE (2-COLUMN GRID)
+       ========================================================================== */
   <section class="section-padding" id="projects">
     <div class="container">
-      <span class="section-eyebrow">Verified Credentials & Projects</span>
-      <h2 class="section-heading">Enterprise Experience</h2>
+      <span class="section-eyebrow">Showcase</span>
+      <h2 class="section-heading">Featured Projects</h2>
 
       <div class="projects-grid">
-        <!-- Project 1: UCI Retail Analytics -->
+        <!-- Project 1 -->
         <div class="project-card">
           <div>
             <div class="project-card-header">
-              <h3 class="project-title">Online Retail Sales & Customer RFM Segmentation</h3>
-              <a href="#projects" class="live-preview-btn">UCI Dataset ↗</a>
+              <h3 class="project-title">Autonomous AI Workflow Suite</h3>
+              <a href="#projects" class="live-preview-btn" target="_blank">Live Preview ↗</a>
             </div>
             <ul class="project-bullets">
-              <li>Cleaned 541,000+ raw transactional records by isolating cancellations and pricing anomalies.</li>
-              <li>Constructed an RFM (Recency, Frequency, Monetary) segmentation model categorizing customer cohorts (Champions, At-Risk, Inactive).</li>
-              <li>Pinpointed seasonal wholesale trajectories peaking in November (£1.51M) and performed Pareto analysis across top client accounts.</li>
+              <li>Integrated autonomous agent workflows linking real-time document analysis with automated multi-platform triggers.</li>
+              <li>Engineered high-performance dark theme dashboard with sub-second state transitions and secure session token management.</li>
             </ul>
           </div>
           <div class="tech-badges">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Power BI</span>
-            <span class="tech-badge">Excel</span>
-            <span class="tech-badge">RFM Modeling</span>
+            <span class="tech-badge">Next.js</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">Supabase</span>
+            <span class="tech-badge">OpenAI API</span>
           </div>
         </div>
 
-        <!-- Project 2: Deloitte Digital Elite Challenge -->
+        <!-- Project 2 -->
         <div class="project-card">
           <div>
             <div class="project-card-header">
-              <h3 class="project-title">Deloitte Digital Elite Challenge (Innovation Tracks)</h3>
-              <a href="#projects" class="live-preview-btn">Credential Verified ↗</a>
+              <h3 class="project-title">High-Scale Enterprise Commerce</h3>
+              <a href="#projects" class="live-preview-btn" target="_blank">Live Preview ↗</a>
             </div>
             <ul class="project-bullets">
-              <li>Formulated AI-Driven Sales Intelligence System optimizing human-AI collaboration in customer sales cycles.</li>
-              <li>Architected proposal for Autonomous Cybersecurity Compliance Agents ("Silicon-Based Colleagues") for multi-agent enterprise governance.</li>
-              <li>Engineered comprehensive technical blueprints and implementation viability decks.</li>
+              <li>Architected custom headless storefront featuring instant filtering, dynamic cart synchronizations, and zero layout shift.</li>
+              <li>Optimized responsive rendering pipeline delivering perfect 100/100 Core Web Vitals performance benchmarks.</li>
             </ul>
           </div>
           <div class="tech-badges">
-            <span class="tech-badge">Deloitte Digital</span>
-            <span class="tech-badge">AI Strategy</span>
-            <span class="tech-badge">Cyber Compliance</span>
-          </div>
-        </div>
-
-        <!-- Project 3: Tata Data Visualisation & GenAI -->
-        <div class="project-card">
-          <div>
-            <div class="project-card-header">
-              <h3 class="project-title">Tata Group: Data Visualisation & GenAI Analytics</h3>
-              <a href="#projects" class="live-preview-btn">Tata Credential ↗</a>
-            </div>
-            <ul class="project-bullets">
-              <li>Framed strategic business scenarios for C-suite executive leadership (CEO & CMO) evaluating global expansion hubs.</li>
-              <li>Constructed executive Tableau/Power BI visualizations including Pareto charts, cohort latency heatmaps, and regional revenue maps.</li>
-              <li>Executed EDA and AI-driven scoring frameworks on consumer credit data to optimize debt collections workflows.</li>
-            </ul>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">Tableau</span>
-            <span class="tech-badge">Executive BI</span>
-            <span class="tech-badge">GenAI Analytics</span>
-          </div>
-        </div>
-
-        <!-- Project 4: Tata Cybersecurity & ESG Advisory -->
-        <div class="project-card">
-          <div>
-            <div class="project-card-header">
-              <h3 class="project-title">Tata Group: Cybersecurity IAM & ESG Sustainability</h3>
-              <a href="#projects" class="live-preview-btn">Tata Credential ↗</a>
-            </div>
-            <ul class="project-bullets">
-              <li>Analyzed enterprise Identity & Access Management (IAM) strategies applying RBAC and least-privilege standards to eliminate policy fragmentation.</li>
-              <li>Evaluated university sustainability data, benchmarked against THE Impact Rankings, and developed fitment matrices for TCS platforms (Clever Energy™, Zero Carbon).</li>
-            </ul>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">IAM / RBAC</span>
-            <span class="tech-badge">Access Auditing</span>
-            <span class="tech-badge">ESG Consulting</span>
+            <span class="tech-badge">React.js</span>
+            <span class="tech-badge">Tailwind CSS</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">PostgreSQL</span>
           </div>
         </div>
       </div>
@@ -988,35 +949,35 @@
 
   <!-- ==========================================================================
        COMPONENT G: "WHAT I BUILD" SERVICES
-       ========================================================================== -->
+       ========================================================================== */
   <section class="section-padding" id="services">
     <div class="container">
-      <span class="section-eyebrow">Deliverables</span>
-      <h2 class="section-heading">What I Deliver</h2>
+      <span class="section-eyebrow">Capabilities</span>
+      <h2 class="section-heading">What I Build</h2>
 
       <div class="services-list">
         <div class="service-item">
           <div class="service-num">01</div>
-          <div class="service-name">Data Cleansing & ETL Pipelines</div>
-          <div class="service-desc">Transforming messy transactional raw data (>500,000 records) into clean, audit-ready relational datasets using Python, Excel formulas, and validation logic.</div>
+          <div class="service-name">Corporate Websites</div>
+          <div class="service-desc">Pixel-perfect, authoritative digital presences built with modern performance standards, responsive grids, and seamless user journeys.</div>
         </div>
 
         <div class="service-item">
           <div class="service-num">02</div>
-          <div class="service-name">Executive BI & Storytelling Dashboards</div>
-          <div class="service-desc">Building intuitive Power BI and Tableau consoles tailored for C-suite stakeholders, featuring Pareto distributions, time-series forecasting, and RFM cohort metrics.</div>
+          <div class="service-name">Landing Pages</div>
+          <div class="service-desc">High-impact, high-converting product showcases designed with refined dark themes, crisp typography, and interactive CTA anchors.</div>
         </div>
 
         <div class="service-item">
           <div class="service-num">03</div>
-          <div class="service-name">Access Governance & Policy Audits</div>
-          <div class="service-desc">Reviewing enterprise permission structures, aligning business roles with RBAC matrices, and ensuring strict compliance with access governance standards.</div>
+          <div class="service-name">SaaS Platforms</div>
+          <div class="service-desc">Scalable web applications featuring multi-tenant authentication, dynamic API connections, and real-time dashboard analytics.</div>
         </div>
 
         <div class="service-item">
           <div class="service-num">04</div>
-          <div class="service-name">ESG & Operational Fitment Analysis</div>
-          <div class="service-desc">Benchmarking sustainability progress reports, diagnosing data collection gaps, and mapping digital solutions (IoT, energy accounting) against corporate targets.</div>
+          <div class="service-name">AI Workflows</div>
+          <div class="service-desc">Autonomous chatbot systems, LLM-powered content pipelines, and custom API-driven productivity integrations.</div>
         </div>
       </div>
     </div>
@@ -1024,33 +985,34 @@
 
   <!-- ==========================================================================
        COMPONENT H: CONNECT SECTION (FOOTER)
-       ========================================================================== -->
+       ========================================================================== */
   <footer class="footer-section" id="contact">
     <div class="container">
       <span class="section-eyebrow">Connect</span>
-      <h2 class="section-heading" style="margin-bottom: 20px;">Let's Discuss Analytics & Operations</h2>
+      <h2 class="section-heading" style="margin-bottom: 20px;">Let's Build Your Product</h2>
       <p style="color: var(--text-muted); max-width: 580px; margin: 0 auto;">
-        Open to opportunities in Data Analytics, Business Intelligence, Operations Support, and Enterprise Systems.
+        Available for selective full-stack engineering contracts, design systems consultation, and custom web builds.
       </p>
 
-      <!-- Clean Social Pills (Button pills without exposed raw emails or phone numbers to prevent scrapers) -->
+      <!-- Clean Social Pills (No raw emails or phone numbers to prevent scrapers) -->
       <div class="social-pills-wrap">
-        <a href="https://linkedin.com/in/ashishsontakke705" target="_blank" class="social-pill">LinkedIn Profile</a>
-        <a href="https://github.com/leorowr" target="_blank" class="social-pill">GitHub Portfolio</a>
-        <a href="mailto:amson705@gmail.com" class="social-pill">Send Message</a>
+        <a href="https://github.com" target="_blank" class="social-pill">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" class="social-pill">LinkedIn</a>
+        <a href="https://instagram.com" target="_blank" class="social-pill">Instagram</a>
+        <a href="#contact" class="social-pill">Connects AI</a>
       </div>
 
       <div class="footer-copy">
-        © 2026 Ashish M. Sontakke. Wardha, Maharashtra, India. All rights reserved.
+        © 2026 ASHISH. Crafted with high performance & dark mode aesthetics.
       </div>
     </div>
   </footer>
 
   <!-- ==========================================================================
-       3. SMOOTH SCROLL OFFSET SCRIPT & DRAWER INTERACTION
-       ========================================================================== -->
+       3. ANIMATION & SMOOTH SCROLL OFFSET SPECIFICATIONS
+       ========================================================================== */
   <script>
-    // Offcanvas Drawer Controls
+    // Component B: Offcanvas Mobile Drawer Interaction
     const mobileDrawer = document.getElementById('mobileDrawer');
     const openDrawerBtn = document.getElementById('openDrawerBtn');
     const closeDrawerBtn = document.getElementById('closeDrawerBtn');
@@ -1068,7 +1030,7 @@
     openDrawerBtn.addEventListener('click', () => toggleDrawer(true));
     closeDrawerBtn.addEventListener('click', () => toggleDrawer(false));
 
-    // Smooth Scroll with Header Offset (Prevents content hiding under 76px sticky navbar)
+    // Smooth Scroll Offset: scrollTop = $(target).offset().top - 90
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
@@ -1077,9 +1039,9 @@
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           e.preventDefault();
-          toggleDrawer(false); // Auto-close drawer if opened
+          toggleDrawer(false); // Auto-close drawer on link click
 
-          const navOffset = 90; // Standard 90px clearance
+          const navOffset = 90; // Exact 90px offset to keep headers clear of sticky navbar
           const elementPosition = targetElement.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - navOffset;
 
